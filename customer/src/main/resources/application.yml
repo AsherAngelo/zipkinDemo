@@ -1,0 +1,23 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: demo-customer
+#  zipkin:
+#    base-url: http://localhost:9998/ #代表字zipkin服务器地址
+  sleuth:
+    sampler:
+      probability: 1.0
+    #percentage: 1.0 #0.1-1.0 也就是代表链路跟踪的数据上传的概率有多大
+#    stream:
+#      enabled: true
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: zhaomengjie
+    password: zhaomengjie
+    virtual-host: zhaomengjie
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
